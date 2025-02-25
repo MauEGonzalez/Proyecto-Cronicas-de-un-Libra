@@ -1,0 +1,144 @@
+body {
+    background-color: #E1C09F;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.logoCronicas {
+    width: 200px;
+}
+
+.imagenRelatos{
+    width: 200px;
+}
+
+.imagenReflexiones{
+    width: 200px;
+}
+
+.enlacesRedes{
+    list-style-type: none;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: bold;
+    display: inline;
+}
+
+header img{
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0; 
+  }
+
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px; 
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-item img {
+    width: 80px; 
+    height: 80px;
+  }
+  
+  .contact-item a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    color: #000;
+  }
+  
+  .contact-form {
+    flex: 1;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #555;
+  }
+
+  .header{
+    display: flex;}
+    
