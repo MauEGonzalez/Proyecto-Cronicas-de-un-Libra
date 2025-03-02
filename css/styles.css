@@ -279,6 +279,15 @@ ul {
       margin-top: 10px;
   }
 
+  .header h1 {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto */
+      word-wrap: break-word; /* Permite que el texto se divida en múltiples líneas */
+  }
+
+  .header h2 {
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
   .divMenu nav ul {
       text-align: center;
       display: flex;
@@ -307,6 +316,7 @@ ul {
       margin-bottom: 10px;
   }
 }
+
 /* Media queries para tablets */
 @media (min-width: 769px) and (max-width: 1064px) {
   header {
