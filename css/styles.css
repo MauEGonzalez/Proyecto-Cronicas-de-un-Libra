@@ -260,11 +260,6 @@ ul {
     border-top: 2px solid #1f1f1f;
   }
 
-  /*Sobre Mi*/
-
-  .sobreMi{
-
-  }
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -313,7 +308,7 @@ ul {
   }
 }
 /* Media queries para tablets */
-@media (min-width: 769px) and (max-width: 1000px) {
+@media (min-width: 769px) and (max-width: 1064px) {
   header {
       flex-direction: row;
       align-items: center;
