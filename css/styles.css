@@ -260,6 +260,11 @@ ul {
     border-top: 2px solid #1f1f1f;
   }
 
+  .imagenSobreMi {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -267,6 +272,7 @@ ul {
       flex-direction: column;
       align-items: center;
       padding: 10px;
+      margin-top: 20px;
   }
 
   .header-top {
@@ -280,12 +286,12 @@ ul {
   }
 
   .header h1 {
-      font-size: 1.5rem; /* Ajusta el tamaño del texto */
-      word-wrap: break-word; /* Permite que el texto se divida en múltiples líneas */
+      font-size: 1.5rem; 
+      word-wrap: break-word;
   }
 
   .header h2 {
-      font-size: 1rem; /* Ajusta el tamaño del texto */
+      font-size: 1rem;
   }
 
   .divMenu nav ul {
@@ -315,6 +321,11 @@ ul {
       width: 100%;
       margin-bottom: 10px;
   }
+
+  .imagenSobreMi {
+    width: 80%;
+    margin-bottom: 20px;
+}
 }
 
 /* Media queries para tablets */
