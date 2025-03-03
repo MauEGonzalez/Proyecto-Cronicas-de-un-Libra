@@ -322,9 +322,26 @@ ul {
       margin-bottom: 10px;
   }
 
-  .imagenSobreMi {
-    width: 80%;
-    margin-bottom: 20px;
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.imagenSobreMi {
+    order: 2; 
+    width: 80%; 
+    margin-bottom: 20px; 
+}
+
+.tituloSobreMi {
+    order: 1;
+}
+
+.textoSobreMi {
+    order: 3;
+    text-align: justify;
+    margin: 10px;
 }
 }
 
