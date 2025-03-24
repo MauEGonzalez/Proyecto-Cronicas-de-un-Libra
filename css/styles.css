@@ -16,7 +16,7 @@ body {
 
 /* Header */
 
-header {
+/* header {
     padding: 20px;
 }
 
@@ -65,7 +65,7 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-}
+} */
 
 section {
     padding: 20px;
@@ -210,9 +210,9 @@ ul {
   }
 
 
-  /*Relatos Inicio*/
+  /* Relatos Inicio */
 
-  .gridContainerRelatos{
+  /* .gridContainerRelatos{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4, 50px);
@@ -234,11 +234,11 @@ ul {
 
   .gridItem.imagenRelatos{
     grid-area: imagen;
-  }
+  } */
 
   /*Reflexiones Inicio*/
 
-  .gridContainerReflexiones{
+  /* .gridContainerReflexiones{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 50px);
@@ -258,7 +258,7 @@ ul {
 
   .relatosInicio{
     border-top: 2px solid #1f1f1f;
-  }
+  } */
 
   .imagenSobreMi {
     max-width: 100%;

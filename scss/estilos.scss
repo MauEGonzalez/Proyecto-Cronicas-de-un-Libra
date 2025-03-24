@@ -1,0 +1,294 @@
+@use "sass:color";
+@import "variables";
+@import "header";
+
+
+// Estilos globales
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background("../img/backgroundBody.jpg");
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+// Secciones generales
+section {
+  padding: 20px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    @include rounded();
+  }
+}
+
+// Footer
+footer {
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    @include background("../img/backgroundBody.jpg");
+  
+    &.footer {
+      @include center-flex;
+      flex-direction: column;
+      padding: 10px;
+  
+      p {
+        margin: 0;
+        margin-bottom: 5px;
+        @include typography(14px);
+      }
+  
+      ul {
+        @include center-flex;
+        list-style: none;
+        padding: 0;
+        margin: 5px 0;
+  
+        li {
+          margin-right: 15px;
+  
+          a {
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+            &.enlacesRedes {
+                list-style-type: none; 
+                text-decoration: none; 
+                color: #1f1f1f; 
+                font-weight: bold; 
+                display: inline; 
+          
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+          }
+        }
+      }
+
+    }
+  }
+  
+// Relatos
+.relatosInicio {
+    border-top: 2px solid $secondary-color;
+  
+    .gridContainerRelatos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 50px);
+      grid-template-areas:
+        "imagen titulo . ."
+        "imagen texto . ."
+        "imagen texto . ."
+        "imagen . . .";
+  
+      .gridItem.imagenRelatos {
+        grid-area: imagen; 
+        width: 200px;
+    }
+  
+      .gridItem.tituloRelato {
+        grid-area: titulo; 
+      }
+  
+      .gridItem.textoRelato {
+        grid-area: texto; 
+        grid-column: 2 / 3; 
+      }
+    }
+  }
+  
+  // Reflexiones
+  .reflexionesInicio {
+    border-top: 2px solid $secondary-color;
+  
+    .gridContainerReflexiones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 50px);
+      grid-template-areas:
+        "imagen titulo . ."
+        "imagen texto . ."
+        "imagen texto . ."
+        "imagen . . .";
+  
+      .gridItem.imagenReflexiones {
+        grid-area: imagen; 
+        width: 200px;
+    }
+  
+      .gridItem.tituloReflexion {
+        grid-area: titulo; 
+      }
+  
+      .gridItem.textoReflexion {
+        grid-column: 2 / 3; 
+      }
+    }
+  }
+  
+
+// Página de contacto
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 80px;
+        height: 80px;
+        @include rounded();
+      }
+
+      a {
+        @include typography(16px, normal, $primary-color);
+
+        &:hover {
+            color: color.scale($primary-color, $lightness: -10%);
+
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      label {
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        @include rounded();
+      }
+
+      button {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        @include rounded();
+        cursor: pointer;
+
+        &:hover {
+            background-color: color.scale($primary-color, $lightness: 10%);
+        }
+      }
+    }
+  }
+}
+
+// Sobre mí
+.sobreMi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tituloSobreMi {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .imagenSobreMi {
+    max-width: 100%;
+    height: auto;
+    @include rounded();
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .textoSobreMi {
+    text-align: justify;
+    margin: 10px;
+  }
+}
+
+// Media queries
+@include responsive(phone) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    .divMenu nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        margin: 5px 10px;
+      }
+    }
+  }
+
+  .relatosInicio .gridContainerRelatos,
+  .reflexionesInicio .gridContainerReflexiones,
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gridItem {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include responsive(tablet) {
+  header {
+    flex-direction: row;
+    align-items: center;
+
+    .divMenu nav ul {
+      text-align: left;
+
+      li {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .relatosInicio .gridContainerRelatos,
+  .reflexionesInicio .gridContainerReflexiones,
+  .contact-section {
+    align-items: flex-start;
+
+    .gridItem {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

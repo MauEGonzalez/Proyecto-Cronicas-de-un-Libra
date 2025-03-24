@@ -1,0 +1,41 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #1f1f1f;
+$font-stack: Arial, sans-serif;
+$border-radius: 10px;
+
+// Mixins
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == tablet {
+      @media (min-width: 769px) and (max-width: 1064px) { @content; }
+    } @else if $breakpoint == desktop {
+      @media (min-width: 1065px) { @content; }
+    }
+  }
+  
+  @mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin rounded($radius: 10px) {
+    border-radius: $radius;
+  }
+  
+  @mixin typography($size: 16px, $weight: normal, $color: $primary-color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+  }
+  
+  @mixin background($image, $size: cover, $repeat: no-repeat, $attachment: fixed) {
+    background: {
+      image: url($image);
+      size: $size;
+      repeat: $repeat;
+      attachment: $attachment;
+    }
+  }
