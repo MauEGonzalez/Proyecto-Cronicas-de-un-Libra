@@ -236,11 +236,23 @@ footer {
 }
 
 // Media queries
+
 @include responsive(phone) {
   header {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+
+    .divLogo {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .logoCronicas {
+      width: 100px;
+      max-width: 90%;
+    }
 
     .divMenu nav ul {
       display: flex;
@@ -250,10 +262,6 @@ footer {
       li {
         margin: 5px 10px;
       }
-    }
-
-    .divLogo {
-      padding-top: 30px;
     }
   }
 
@@ -276,6 +284,17 @@ footer {
     flex-direction: row;
     align-items: center;
 
+    .divLogo {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 15px;
+    }
+
+    .logoCronicas {
+      width: 130px;
+      max-width: 80%;
+    }
+
     .divMenu nav ul {
       text-align: left;
 
@@ -293,6 +312,29 @@ footer {
     .gridItem {
       width: 100%;
       margin-bottom: 20px;
+    }
+  }
+}
+
+@include responsive(desktop) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    align-items: center;
+
+    .divLogo {
+      grid-column: 1 / 2;
+      justify-content: start;
+    }
+
+    .logoCronicas {
+      width: 150px;
+      max-width: 100%;
+    }
+
+    .divMenu {
+      grid-column: 2 / 6;
     }
   }
 }
