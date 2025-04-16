@@ -131,6 +131,8 @@ footer.footer ul li a.enlacesRedes:hover {
 }
 .relatosInicio .gridContainerRelatos .gridItem.tituloRelato {
   grid-area: titulo;
+  width: 400px;
+  
 }
 .relatosInicio .gridContainerRelatos .gridItem.textoRelato {
   grid-area: texto;
@@ -152,6 +154,7 @@ footer.footer ul li a.enlacesRedes:hover {
 }
 .reflexionesInicio .gridContainerReflexiones .gridItem.tituloReflexion {
   grid-area: titulo;
+  width: 400px;
 }
 .reflexionesInicio .gridContainerReflexiones .gridItem.textoReflexion {
   grid-column: 2/3;
@@ -242,6 +245,9 @@ footer.footer ul li a.enlacesRedes:hover {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+  }
+  header .divLogo{
+    padding-top: 30px;
   }
   header .divMenu nav ul {
     display: flex;
